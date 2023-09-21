@@ -18,7 +18,6 @@ public class LoginPage {
     }
 
     public VerificationPage login(String login, String password) {
-        open("http://localhost:9999");
         loginInput.val(login);
         passwordInput.val(password);
         loginButton.click();

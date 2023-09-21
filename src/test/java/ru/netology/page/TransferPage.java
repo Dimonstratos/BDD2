@@ -2,6 +2,7 @@ package ru.netology.page;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import com.sun.beans.introspect.PropertyInfo;
 
 import static com.codeborne.selenide.Condition.hidden;
 import static com.codeborne.selenide.Condition.visible;
@@ -32,7 +33,7 @@ public class TransferPage {
         transferButton.click();
     }
 
-    public CardBalancePage checkNotification(Condition status) {
+    public CardBalancePage checkNotification(PropertyInfo.Name status) {
         errorNotification.should(status);
         if (status.equals(visible)) {
             errorButton.click();

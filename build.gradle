@@ -1,6 +1,5 @@
 plugins {
     id 'java'
-    id 'org.jetbrains.kotlin.jvm' version '1.9.0'
 }
 
 group 'ru.netology'
@@ -13,19 +12,15 @@ repositories {
 }
 
 dependencies {
-    implementation group: 'com.codeborne', name: 'selenide', version: '6.5.2'
+    implementation group: 'com.codeborne', name: 'selenide', version: '6.7.12'
     testImplementation "org.junit.jupiter:junit-jupiter:5.8.2"
     testImplementation 'org.junit.vintage:junit-vintage-engine:5.8.2'
     testImplementation 'io.cucumber:cucumber-java:7.3.3'
     testImplementation 'io.cucumber:cucumber-junit:7.3.3'
     testImplementation 'org.slf4j:slf4j-simple:1.7.36'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 }
 
 test {
     useJUnitPlatform()
     systemProperty('selenide.headless', System.getProperty('selenide.headless'))
-}
-kotlin {
-    jvmToolchain(11)
 }
