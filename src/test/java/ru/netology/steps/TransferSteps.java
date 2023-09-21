@@ -21,8 +21,8 @@ public class TransferSteps {
     public void authAndVerification(String login, String password) {
         loginPage = Selenide.open("http://localhost:9999", LoginPage.class);
         verificationPage = loginPage.loginWithValidData(login, password);
-        var authInfo = DataHelper.getAuthInfo();
-        var verificationCode = DataHelper.getVerificationCodeFor(authInfo);
+        var authInfo = RunnerTest.getAuthInfo();
+        var verificationCode = RunnerTest.getVerificationCodeFor(authInfo);
         dashboardPage = verificationPage.validVerify(verificationCode);
     }
 

@@ -7,6 +7,7 @@ import com.sun.beans.introspect.PropertyInfo;
 import static com.codeborne.selenide.Condition.hidden;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$x;
+import static com.sun.beans.introspect.PropertyInfo.Name.hidden;
 
 public class TransferPage {
     private SelenideElement amountInput = $x("//span[@data-test-id='amount']//input");
